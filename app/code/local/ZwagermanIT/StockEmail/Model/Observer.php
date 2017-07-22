@@ -26,7 +26,7 @@ $product = Mage::getModel('catalog/product')->load($stockItem->getProductId());
     $mail = new Zend_Mail();
     $mail->setType(Zend_Mime::MULTIPART_RELATED);
     $mail->setBodyHtml($body);
-    $mail->setFrom('stock@zwagerman-it.tk', 'Voorraadbeheerder IPcam-Shop');
+    $mail->setFrom('stock@zwagerman-it.tk', 'Voorraadbeheerder');
     $mail->addTo('stock@zwagerman-it.tk', 'Receiver');
     $mail->setSubject("[Melding] {$product->getSku()} is niet langer op voorraad");
     $mail->send();
